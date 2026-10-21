@@ -1,0 +1,13 @@
+Copas propias del modo leyenda - Iron to Legend
+
+Poné en esta carpeta un PNG por copa con el nombre exacto (en minúscula).
+Las copas que no tengan archivo siguen usando el diseño dibujado del juego.
+
+Internacionales:  worlds.png  msi.png  fst.png  ewc.png  enc.png
+Ligas mayores:    lck.png  lpl.png  lec.png  lcs.png  cblol.png  lcp.png
+Otros torneos:    emm.png (EMEA Masters)  ascenso.png (torneos de ascenso)
+Ligas regionales: regional.png (vale para todas)
+  o una por liga: lckcl.png ldl.png lfl.png sl.png prm.png nlc.png tcl.png
+                  nacl.png lrn.png lrs.png cd.png vcs.png pcs.png ljl.png oce.png
+
+Formato: PNG con fondo transparente, cuadrado (512x512 recomendado).

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Novedades – Iron to Legend</title>
+<meta name="description" content="Notas de los parches de Iron to Legend: novedades, cambios y correcciones de los simuladores de carrera de League of Legends.">
+<link rel="canonical" href="https://irontolegend.com/news">
+<meta name="theme-color" content="#070b14">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Iron to Legend">
+<meta property="og:title" content="Iron to Legend – Patch notes">
+<meta property="og:description" content="News, changes and fixes for Iron to Legend, the League of Legends career simulator.">
+<meta property="og:url" content="https://irontolegend.com/news">
+<meta property="og:image" content="https://irontolegend.com/preview.jpg?v=3">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@irontolegendgam">
+<meta name="twitter:title" content="Iron to Legend – Patch notes">
+<meta name="twitter:description" content="News, changes and fixes for Iron to Legend, the League of Legends career simulator.">
+<meta name="twitter:image" content="https://irontolegend.com/preview.jpg?v=3">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#070b14; --surface:#0e1522; --surface-2:#141e30; --raise:#1d2a41; --line:#25354f; --line-soft:#17233a;
+  --fg:#eef0ea; --muted:#8f9bb1; --faint:#5a667e;
+  --gold:#c8aa6e; --gold-hi:#f0d9a0; --teal:#0ac8b9; --good:#38d27f; --info:#64abff; --warn:#f2a93b;
+  --font-display:"Chakra Petch","Arial Narrow",system-ui,sans-serif;
+  --font-body:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --cut:10px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--bg);scroll-padding-top:72px}
+body{margin:0;padding-inline:16px;color:var(--fg);font-family:var(--font-body);font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(1100px 520px at 8% -8%,rgba(10,200,185,.07),transparent 62%),radial-gradient(900px 560px at 108% 104%,rgba(200,170,110,.07),transparent 60%),var(--bg);background-attachment:fixed}
+::selection{background:color-mix(in srgb,var(--gold) 40%,transparent)}
+a{color:var(--gold-hi);text-underline-offset:3px;text-decoration-color:color-mix(in srgb,var(--gold) 50%,transparent)}
+a:hover{color:#fff}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto}
+.topbar{position:sticky;top:0;z-index:5;margin-inline:-16px;padding:10px 16px;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
+.topbar-in{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:19px;color:var(--fg);text-decoration:none;white-space:nowrap}
+.logo:hover{color:var(--gold-hi)}
+.logo svg{flex:none}
+.langs{display:flex;gap:4px}
+.langs button{font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:.06em;padding:6px 10px;border-radius:3px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer}
+.langs button:hover{color:var(--fg);border-color:var(--gold)}
+.langs button[aria-pressed="true"]{color:var(--gold-hi);border-color:color-mix(in srgb,var(--gold) 65%,transparent);background:color-mix(in srgb,var(--gold) 10%,transparent)}
+main{padding-block:28px 12px}
+.eyebrow{font-family:var(--font-display);font-size:13.5px;font-weight:600;color:var(--gold);margin:0 0 6px}
+h1{font-family:var(--font-display);font-weight:700;font-size:clamp(32px,7vw,48px);line-height:1.05;letter-spacing:-.01em;margin:0 0 10px;text-wrap:balance}
+.lead{font-size:17px;color:#cdd3de;margin:0 0 18px;max-width:58ch}
+.follow{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px}
+.follow a{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line);border-radius:3px;text-decoration:none;font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--fg);background:var(--surface)}
+.follow a:hover{border-color:var(--gold);color:var(--gold-hi)}
+.follow .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+
+/* Parches: tarjeta con esquinas talladas, como en el sitio */
+.patch{position:relative;margin:0 0 18px;padding:22px 22px 18px;background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+.patch.latest{border-color:color-mix(in srgb,var(--gold) 55%,var(--line));background:radial-gradient(600px 220px at 0% 0%,rgba(200,170,110,.10),transparent 70%),linear-gradient(180deg,var(--surface-2),var(--surface))}
+.patch-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:8px}
+.ver{font-family:var(--font-display);font-weight:700;font-size:13.5px;letter-spacing:.04em;color:var(--on-gold,#17120a);background:linear-gradient(180deg,#f0d9a0,#c8aa6e);padding:3px 10px;border-radius:2px}
+.patch:not(.latest) .ver{background:var(--raise);color:var(--gold-hi)}
+.date{color:var(--muted);font-size:14px}
+.badge{font-family:var(--font-display);font-weight:600;font-size:12.5px;color:var(--teal);border:1px solid color-mix(in srgb,var(--teal) 50%,transparent);padding:2px 8px;border-radius:2px}
+.patch h2{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,4.6vw,28px);line-height:1.15;margin:0 0 8px}
+.patch h2 a{color:inherit;text-decoration:none}
+.patch h2 a:hover{color:var(--gold-hi)}
+.summary{color:#cdd3de;margin:0 0 14px;max-width:62ch}
+.group{margin-top:12px}
+.group h3{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:600;font-size:15px;margin:0 0 6px;color:var(--fg)}
+.group h3::before{content:"";width:10px;height:10px;transform:rotate(45deg);background:var(--k,var(--gold))}
+.group.new{--k:var(--good)} .group.changes{--k:var(--info)} .group.fixes{--k:var(--warn)}
+.group ul{margin:0;padding-left:20px;color:#cdd3de}
+.group li{margin-bottom:7px}
+.group li::marker{color:var(--faint)}
+.group li b{color:var(--fg);font-weight:600}
+.share{display:flex;justify-content:flex-end;margin-top:12px}
+.share button{font:inherit;font-size:13px;color:var(--muted);background:none;border:0;padding:4px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+.share button:hover{color:var(--gold-hi)}
+footer{padding:22px 0 calc(env(safe-area-inset-bottom,0px) + 28px);border-top:1px solid var(--line-soft);margin-top:14px;color:var(--faint);font-size:13.5px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--gold-hi)}
+@media (max-width:480px){ .patch{padding:18px 16px 14px} }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="logo" href="/" data-home><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><defs><linearGradient id="itlg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3dda6"/><stop offset="1" stop-color="#9c7a3c"/></linearGradient></defs><path d="M14 1.8 26.2 14 14 26.2 1.8 14Z" fill="#0d1421" stroke="url(#itlg)" stroke-width="1.8"/><path d="M8.6 13 14 8.4l5.4 4.6M8.6 18.2 14 13.6l5.4 4.6" fill="none" stroke="url(#itlg)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Iron to Legend</a>
+    <nav class="langs" aria-label="Idioma / Language / Idioma">
+      <button type="button" data-lang="es" lang="es">ES</button>
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="pt" lang="pt-BR">PT</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="eyebrow" data-t="eyebrow">Iron to Legend</p>
+  <h1 data-t="h1">Novedades</h1>
+  <p class="lead" data-t="lead">Las notas de cada parche: lo nuevo, lo que cambió y lo que corregimos.</p>
+  <div class="follow">
+    <a href="https://discord.gg/JK8xXmqCr" target="_blank" rel="noopener" style="--c:#5865F2"><span class="dot"></span>Discord</a>
+    <a href="https://x.com/irontolegendgam" target="_blank" rel="noopener" style="--c:#e7e9ea"><span class="dot"></span>Twitter</a>
+  </div>
+  <div id="patches"></div>
+</main>
+
+<footer class="wrap">
+  <a href="/" data-home data-t="back">← Volver a los juegos</a>
+  <a href="/privacy" data-page="privacy" data-t="privacy">Privacidad</a>
+</footer>
+
+<script>
+/* =====================================================================
+   PARCHES · para publicar uno nuevo, cópialo ARRIBA de todo en esta lista.
+   Cada texto va en tres idiomas: ['español', 'english', 'português'].
+   Grupos posibles: new (Nuevo), changes (Cambios), fixes (Correcciones).
+   ===================================================================== */
+var PATCHES = [
+  {
+    v: '1.2', date: '2026-10-16',
+    title: ['Partidos oficiales, comunidad y novedades', 'Official matches, community and news', 'Partidas oficiais, comunidade e novidades'],
+    summary: [
+      'Ahora puedes seguir los partidos oficiales de LoL desde el sitio, ya tenemos Discord y Twitter oficiales y estrenamos esta página para contarte cada cambio del juego.',
+      'You can now follow official LoL matches right on the site, we have an official Discord and Twitter, and we are launching this page to tell you about every change to the game.',
+      'Agora você pode acompanhar as partidas oficiais de LoL pelo site, temos Discord e Twitter oficiais e estreamos esta página para contar cada mudança do jogo.'
+    ],
+    groups: [
+      {k: 'new', items: [
+        ['<b>Partidos oficiales de LoL.</b> Arriba de todo ves los últimos resultados, los partidos en vivo y los próximos de Worlds, MSI y las ligas principales. En el celular están al final de la portada, organizados por día y por liga. Cada partido te lleva a su página en lolesports.com.',
+         '<b>Official LoL matches.</b> At the very top you can see the latest results, live matches and upcoming games from Worlds, MSI and the major leagues. On mobile they are at the bottom of the home page, sorted by day and league. Each match takes you to its page on lolesports.com.',
+         '<b>Partidas oficiais de LoL.</b> No topo do site você vê os últimos resultados, as partidas ao vivo e as próximas do Mundial, do MSI e das principais ligas. No celular elas ficam no fim da página inicial, organizadas por dia e por liga. Cada partida leva à sua página no lolesports.com.'],
+        ['<b>Página de novedades.</b> Aquí vas a encontrar las notas de cada parche: lo nuevo, los cambios y las correcciones.',
+         '<b>News page.</b> This is where you will find the notes for every patch: what is new, what changed and what we fixed.',
+         '<b>Página de novidades.</b> Aqui você vai encontrar as notas de cada patch: o que há de novo, as mudanças e as correções.'],
+        ['<b>Discord oficial.</b> Únete para proponer ideas, reportar errores y comparar tus resultados del desafío diario.',
+         '<b>Official Discord.</b> Join to suggest ideas, report bugs and compare your daily challenge results.',
+         '<b>Discord oficial.</b> Entre para sugerir ideias, reportar bugs e comparar seus resultados do desafio diário.'],
+        ['<b>Twitter oficial.</b> Síguenos para enterarte primero de los parches y ver los mejores resultados del ranking.',
+         '<b>Official Twitter.</b> Follow us to hear about patches first and see the best results from the ranking.',
+         '<b>Twitter oficial.</b> Siga a gente para saber dos patches antes de todo mundo e ver os melhores resultados do ranking.'],
+        ['<b>Política de privacidad.</b> Explica qué datos usa el sitio y cómo puedes controlarlos.',
+         '<b>Privacy policy.</b> It explains what data the site uses and how you can control it.',
+         '<b>Política de privacidade.</b> Explica quais dados o site usa e como você pode controlá-los.']
+      ]},
+      {k: 'changes', items: [
+        ['Los íconos de redes de la portada, de Sobre nosotros y del pie ahora llevan a nuestro Discord y a nuestro Twitter.',
+         'The social icons on the home page, About us and the footer now link to our Discord and Twitter.',
+         'Os ícones de redes da página inicial, de Sobre nós e do rodapé agora levam ao nosso Discord e ao nosso Twitter.'],
+        ['Nuevos accesos a Novedades en la barra superior y en el pie de página.',
+         'New links to the News page in the top bar and the footer.',
+         'Novos atalhos para Novidades na barra superior e no rodapé.']
+      ]}
+    ]
+  },
+  {
+    v: '1.1', date: '2026-10-12',
+    title: ['Olá, Brasil', 'Olá, Brasil', 'Olá, Brasil'],
+    summary: [
+      'Iron to Legend ahora también se juega en portugués de Brasil.',
+      'Iron to Legend can now also be played in Brazilian Portuguese.',
+      'Agora o Iron to Legend também pode ser jogado em português do Brasil.'
+    ],
+    groups: [
+      {k: 'new', items: [
+        ['<b>Portugués de Brasil.</b> Los dos juegos, el desafío diario y el ranking están traducidos completos.',
+         '<b>Brazilian Portuguese.</b> Both games, the daily challenge and the ranking are fully translated.',
+         '<b>Português do Brasil.</b> Os dois jogos, o desafio diário e o ranking estão totalmente traduzidos.']
+      ]},
+      {k: 'changes', items: [
+        ['<b>Idioma automático.</b> El sitio elige el idioma según el país desde el que te conectas. Puedes cambiarlo cuando quieras desde el menú de idioma y tu elección queda guardada.',
+         '<b>Automatic language.</b> The site picks the language based on the country you connect from. You can change it any time from the language menu, and your choice is saved.',
+         '<b>Idioma automático.</b> O site escolhe o idioma de acordo com o país de onde você se conecta. Você pode mudá-lo quando quiser no menu de idioma, e sua escolha fica salva.']
+      ]}
+    ]
+  },
+  {
+    v: '1.0', date: '2026-10-09',
+    title: ['Lanzamiento', 'Launch', 'Lançamento'],
+    summary: [
+      'Iron to Legend llega a irontolegend.com: simuladores de carrera de League of Legends, gratis y sin crear una cuenta.',
+      'Iron to Legend arrives at irontolegend.com: League of Legends career simulators, free and without creating an account.',
+      'Iron to Legend chega ao irontolegend.com: simuladores de carreira de League of Legends, de graça e sem criar conta.'
+    ],
+    groups: [
+      {k: 'new', items: [
+        ['<b>Crea tu leyenda.</b> Sigue a un jugador profesional desde SoloQ hasta los Mundiales: elige país, línea y campeón main, ficha por equipos y pelea por títulos hasta el retiro.',
+         '<b>Build Your Legend.</b> Follow a pro player from SoloQ to Worlds: pick a country, role and main champion, sign with teams and fight for titles until you retire.',
+         '<b>Crie sua lenda.</b> Acompanhe um jogador profissional da SoloQ aos Mundiais: escolha país, rota e campeão main, assine com times e dispute títulos até a aposentadoria.'],
+        ['<b>Crea tu campeón (beta).</b> Diseña un campeón y cuídalo durante diez temporadas: parches, skins, actualizaciones y la relación con sus mains.',
+         '<b>Build Your Champion (beta).</b> Design a champion and look after it for ten seasons: patches, skins, updates and its relationship with its mains.',
+         '<b>Crie seu campeão (beta).</b> Crie um campeão e cuide dele durante dez temporadas: patches, skins, atualizações e a relação com seus mains.'],
+        ['<b>Desafío diario.</b> Cada día, todos los jugadores del mundo empiezan con el mismo personaje y la misma suerte. Tu primer intento entra al ranking mundial y al de tu país, y si juegas varios días seguidos sumas racha.',
+         '<b>Daily challenge.</b> Every day, every player in the world starts with the same character and the same luck. Your first run goes on the global and country rankings, and playing several days in a row builds a streak.',
+         '<b>Desafio diário.</b> Todo dia, todos os jogadores do mundo começam com o mesmo personagem e a mesma sorte. Sua primeira tentativa entra no ranking mundial e no do seu país, e jogando vários dias seguidos você soma sequência.'],
+        ['<b>Logros y récords.</b> Se guardan en tu propio navegador y, al terminar cada partida, te llevas una imagen con tu historia para compartir.',
+         '<b>Achievements and records.</b> They are saved in your own browser, and at the end of each run you get an image of your story to share.',
+         '<b>Conquistas e recordes.</b> Ficam salvos no seu próprio navegador e, ao final de cada partida, você leva uma imagem com sua história para compartilhar.']
+      ]}
+    ]
+  }
+];
+
+(function(){
+  var IDS = ['es', 'en', 'pt'], LI = {es: 0, en: 1, pt: 2};
+  var UI = {
+    title:   ['Novedades – Iron to Legend', 'News – Iron to Legend', 'Novidades – Iron to Legend'],
+    eyebrow: ['Iron to Legend', 'Iron to Legend', 'Iron to Legend'],
+    h1:      ['Novedades', 'News', 'Novidades'],
+    lead:    ['Las notas de cada parche: lo nuevo, lo que cambió y lo que corregimos.', 'Notes for every patch: what is new, what changed and what we fixed.', 'As notas de cada patch: o que há de novo, o que mudou e o que corrigimos.'],
+    back:    ['← Volver a los juegos', '← Back to the games', '← Voltar aos jogos'],
+    privacy: ['Privacidad', 'Privacy', 'Privacidade'],
+    patch:   ['Parche', 'Patch', 'Patch'],
+    latest:  ['Último parche', 'Latest patch', 'Último patch'],
+    new:     ['Nuevo', 'New', 'Novo'],
+    changes: ['Cambios', 'Changes', 'Mudanças'],
+    fixes:   ['Correcciones', 'Fixes', 'Correções'],
+    copy:    ['Copiar enlace', 'Copy link', 'Copiar link'],
+    copied:  ['¡Enlace copiado!', 'Link copied!', 'Link copiado!']
+  };
+  var LOCALES = {es: 'es-AR', en: 'en-US', pt: 'pt-BR'}, HTML_LANG = {es: 'es', en: 'en', pt: 'pt-BR'};
+  var KEY = 'grieta-sim.lang', FILE = location.protocol === 'file:';
+  var lang = 'es';
+
+  function pick(){
+    try{ var q = new URLSearchParams(location.search).get('lang'); if(IDS.indexOf(q) >= 0) return q; }catch(e){}
+    try{ var s = localStorage.getItem(KEY); if(IDS.indexOf(s) >= 0) return s; }catch(e){}
+    var n = ((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+    return n.indexOf('es') === 0 ? 'es' : n.indexOf('pt') === 0 ? 'pt' : 'en';
+  }
+  function t(arr){ return arr[LI[lang]]; }
+  function anchor(p){ return 'v' + p.v.replace(/\./g, '-'); }
+  function fmtDate(iso){
+    var d = iso.split('-').map(Number);
+    try{ return new Date(Date.UTC(d[0], d[1] - 1, d[2])).toLocaleDateString(LOCALES[lang], {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'}); }
+    catch(e){ return iso; }
+  }
+  function render(){
+    var html = PATCHES.map(function(p, i){
+      var id = anchor(p);
+      return '<article class="patch' + (i === 0 ? ' latest' : '') + '" id="' + id + '">' +
+        '<div class="patch-head"><span class="ver">' + t(UI.patch) + ' ' + p.v + '</span>' +
+        '<time class="date" datetime="' + p.date + '">' + fmtDate(p.date) + '</time>' +
+        (i === 0 ? '<span class="badge">' + t(UI.latest) + '</span>' : '') + '</div>' +
+        '<h2><a href="#' + id + '">' + t(p.title) + '</a></h2>' +
+        '<p class="summary">' + t(p.summary) + '</p>' +
+        p.groups.map(function(g){
+          return '<div class="group ' + g.k + '"><h3>' + t(UI[g.k]) + '</h3><ul>' +
+            g.items.map(function(it){ return '<li>' + t(it) + '</li>'; }).join('') + '</ul></div>';
+        }).join('') +
+        '<div class="share"><button type="button" data-copy="' + id + '">' + t(UI.copy) + '</button></div>' +
+        '</article>';
+    }).join('');
+    document.getElementById('patches').innerHTML = html;
+  }
+  function show(l){
+    lang = l;
+    document.documentElement.lang = HTML_LANG[l];
+    document.title = t(UI.title);
+    document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = t(UI[el.getAttribute('data-t')]); });
+    document.querySelectorAll('.langs button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-lang') === l ? 'true' : 'false'); });
+    document.querySelectorAll('[data-home]').forEach(function(a){ a.href = FILE ? 'index.html' : '/'; });
+    document.querySelectorAll('[data-page="privacy"]').forEach(function(a){ a.href = (FILE ? 'privacy.html' : '/privacy') + '?lang=' + l; });
+    render();
+  }
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var l = b.getAttribute('data-lang');
+      show(l);
+      try{ var u = new URL(location.href); u.searchParams.set('lang', l); history.replaceState(null, '', u); }catch(e){}
+    });
+  });
+  document.getElementById('patches').addEventListener('click', function(ev){
+    var b = ev.target.closest('[data-copy]'); if(!b) return;
+    var url = 'https://irontolegend.com/news?lang=' + lang + '#' + b.getAttribute('data-copy');
+    var done = function(){ b.textContent = t(UI.copied); setTimeout(function(){ b.textContent = t(UI.copy); }, 1800); };
+    try{ navigator.clipboard.writeText(url).then(done, function(){ prompt('', url); }); }catch(e){ prompt('', url); }
+  });
+  show(pick());
+  if(location.hash){ var el = document.getElementById(location.hash.slice(1)); if(el) el.scrollIntoView(); }
+})();
+</script>
+</body>
+</html>

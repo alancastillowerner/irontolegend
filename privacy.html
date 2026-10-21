@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Política de privacidad – Iron to Legend</title>
+<meta name="description" content="Política de privacidad de Iron to Legend: qué datos se usan, cookies, Google Analytics, Google AdSense, ranking del desafío diario y tus derechos.">
+<link rel="canonical" href="https://irontolegend.com/privacy">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#070b14">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#070b14; --surface:#0e1522; --surface-2:#141e30; --raise:#1d2a41; --line:#25354f; --line-soft:#17233a;
+  --fg:#eef0ea; --muted:#8f9bb1; --faint:#5a667e;
+  --gold:#c8aa6e; --gold-hi:#f0d9a0; --teal:#0ac8b9;
+  --font-display:"Chakra Petch","Arial Narrow",system-ui,sans-serif;
+  --font-body:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--bg)}
+body{margin:0;padding-inline:16px;color:var(--fg);font-family:var(--font-body);font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(1100px 520px at 8% -8%,rgba(10,200,185,.07),transparent 62%),radial-gradient(900px 560px at 108% 104%,rgba(200,170,110,.07),transparent 60%),var(--bg);background-attachment:fixed}
+::selection{background:color-mix(in srgb,var(--gold) 40%,transparent)}
+a{color:var(--gold-hi);text-underline-offset:3px;text-decoration-color:color-mix(in srgb,var(--gold) 50%,transparent);overflow-wrap:anywhere}
+a:hover{color:#fff}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto}
+.topbar{position:sticky;top:0;z-index:5;margin-inline:-16px;padding:10px 16px;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
+.topbar-in{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:19px;color:var(--fg);text-decoration:none;white-space:nowrap}
+.logo:hover{color:var(--gold-hi)}
+.logo svg{flex:none}
+.langs{display:flex;gap:4px}
+.langs button{font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:.06em;padding:6px 10px;border-radius:3px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer}
+.langs button:hover{color:var(--fg);border-color:var(--gold)}
+.langs button[aria-pressed="true"]{color:var(--gold-hi);border-color:color-mix(in srgb,var(--gold) 65%,transparent);background:color-mix(in srgb,var(--gold) 10%,transparent)}
+main{padding-block:28px 12px}
+.eyebrow{font-family:var(--font-display);font-size:13.5px;font-weight:600;color:var(--gold);margin:0 0 6px}
+h1{font-family:var(--font-display);font-weight:700;font-size:clamp(30px,6.4vw,44px);line-height:1.05;letter-spacing:-.01em;margin:0 0 10px;text-wrap:balance}
+.updated{color:var(--muted);font-size:14px;margin:0 0 22px}
+.lead{font-size:17px;color:var(--fg);margin:0 0 26px;max-width:62ch}
+section{padding:20px 0;border-top:1px solid var(--line-soft)}
+h2{font-family:var(--font-display);font-weight:700;font-size:20px;line-height:1.25;margin:0 0 10px;color:var(--fg)}
+h2 span{color:var(--gold);margin-right:8px;font-variant-numeric:tabular-nums}
+p{margin:0 0 10px;color:#cdd3de}
+ul{margin:0 0 10px;padding-left:20px;color:#cdd3de}
+li{margin-bottom:6px}
+li::marker{color:var(--gold)}
+strong{color:var(--fg);font-weight:600}
+.box{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:14px 16px;margin:12px 0}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+.table{width:100%;border-collapse:collapse;font-size:14.5px;margin:6px 0 10px}
+.table th,.table td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line-soft)}
+.table th{font-family:var(--font-display);font-weight:600;color:var(--gold);font-size:13.5px;border-bottom-color:var(--line)}
+.table td{color:#cdd3de}
+.table td:first-child{color:var(--fg);font-weight:500}
+@media (max-width:560px){
+  .table thead{display:none}
+  .table tr{display:block;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+  .table td{display:block;padding:2px 0;border:0}
+  .table td:nth-child(2){color:var(--muted);font-size:13.5px}
+}
+.contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.contact a{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);border-radius:3px;text-decoration:none;font-family:var(--font-display);font-weight:600;color:var(--fg);background:var(--surface)}
+.contact a:hover{border-color:var(--gold);color:var(--gold-hi)}
+footer{padding:22px 0 calc(env(safe-area-inset-bottom,0px) + 28px);border-top:1px solid var(--line-soft);margin-top:10px;color:var(--faint);font-size:13px;text-align:center}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="logo" href="/" id="home-link"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><defs><linearGradient id="itlg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3dda6"/><stop offset="1" stop-color="#9c7a3c"/></linearGradient></defs><path d="M14 1.8 26.2 14 14 26.2 1.8 14Z" fill="#0d1421" stroke="url(#itlg)" stroke-width="1.8"/><path d="M8.6 13 14 8.4l5.4 4.6M8.6 18.2 14 13.6l5.4 4.6" fill="none" stroke="url(#itlg)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Iron to Legend</a>
+    <nav class="langs" aria-label="Idioma / Language / Idioma">
+      <button type="button" data-lang="es" lang="es">ES</button>
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="pt" lang="pt-BR">PT</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ===================== ESPAÑOL ===================== -->
+<article data-l="es" lang="es">
+  <p class="eyebrow">Iron to Legend</p>
+  <h1>Política de privacidad</h1>
+  <p class="updated">Última actualización: 16 de octubre de 2026</p>
+  <p class="lead">Iron to Legend (irontolegend.com) es un fan game gratuito y no oficial de League of Legends. Aquí te contamos qué datos se usan cuando juegas, para qué, con quién se comparten y cómo puedes controlarlos. Para jugar no necesitas crear una cuenta ni darnos tu correo.</p>
+
+  <section>
+    <h2><span>1</span>Quién es el responsable</h2>
+    <p>Iron to Legend es un proyecto independiente operado desde Argentina. Si tienes cualquier consulta sobre esta política o sobre tus datos, escríbenos por los canales de la sección <a href="#es-contacto">Contacto</a>.</p>
+  </section>
+
+  <section>
+    <h2><span>2</span>Datos que se guardan en tu dispositivo</h2>
+    <p>El juego guarda en el almacenamiento local de tu navegador (localStorage), y no en nuestros servidores:</p>
+    <ul>
+      <li>tu partida en curso, tus historias y tus récords;</li>
+      <li>tus resultados del desafío diario;</li>
+      <li>el idioma elegido y si el sonido está activado;</li>
+      <li>un identificador aleatorio del dispositivo, que no contiene datos personales y sirve para que el ranking reconozca tus resultados;</li>
+      <li>el nombre que usas en el ranking.</li>
+    </ul>
+    <p>Puedes borrar todo esto cuando quieras desde la configuración de tu navegador (borrar los datos del sitio). Ten en cuenta que así también pierdes tu progreso.</p>
+  </section>
+
+  <section>
+    <h2><span>3</span>Ranking del desafío diario</h2>
+    <p>Cuando terminas tu primer intento del día, se envía a nuestro servidor (alojado en Cloudflare):</p>
+    <ul>
+      <li>el identificador aleatorio de tu dispositivo;</li>
+      <li>tu nombre en el ranking: uno generado automáticamente o el que elijas;</li>
+      <li>el día, el juego, tu puntaje y un resumen del resultado (título obtenido, rango máximo, títulos y mundiales).</li>
+    </ul>
+    <p>Además, el servidor registra el país aproximado de tu conexión, que Cloudflare deduce de tu dirección IP, y un código derivado de la IP mediante una función irreversible (hash), que se usa para limitar trampas y envíos repetidos. <strong>No guardamos tu dirección IP.</strong></p>
+    <p>En el ranking público se ven tu nombre, tu país, tu puntaje y tu resultado. No uses tu nombre real ni otros datos personales como nombre en el ranking.</p>
+  </section>
+
+  <section>
+    <h2><span>4</span>Estadísticas de uso</h2>
+    <p>Usamos Google Analytics, cargado mediante Google Tag Manager, para saber cuántas personas visitan el sitio, desde qué países y qué secciones usan. Google Analytics usa cookies y recibe datos técnicos como tu dirección IP, el tipo de dispositivo y de navegador y las páginas que visitas. Usamos esa información solo en forma agregada, para mejorar el sitio.</p>
+    <p>Puedes leer <a href="https://policies.google.com/technologies/partner-sites?hl=es" target="_blank" rel="noopener">cómo usa Google la información de los sitios que usan sus servicios</a> y desactivar Google Analytics con su <a href="https://tools.google.com/dlpage/gaoptout?hl=es" target="_blank" rel="noopener">complemento de inhabilitación</a>.</p>
+  </section>
+
+  <section>
+    <h2><span>5</span>Publicidad (Google AdSense)</h2>
+    <p>Mostramos anuncios de Google AdSense para cubrir los costos del sitio.</p>
+    <div class="box">
+      <ul>
+        <li>Proveedores externos, incluido Google, usan cookies para mostrar anuncios basados en tus visitas anteriores a este sitio y a otros sitios web.</li>
+        <li>Las cookies publicitarias permiten a Google y a sus socios mostrarte anuncios según tus visitas a este sitio y/o a otros sitios de Internet.</li>
+        <li>Puedes desactivar la publicidad personalizada en la <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Configuración de anuncios de Google</a>. También puedes desactivar las cookies de otros proveedores para publicidad personalizada en <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a> o, en Europa, en <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener">youronlinechoices.eu</a>.</li>
+      </ul>
+    </div>
+    <p>Si desactivas la personalización, seguirás viendo anuncios, pero no estarán basados en tus intereses. Si visitas el sitio desde el Espacio Económico Europeo, el Reino Unido o Suiza, te pedimos tu consentimiento antes de usar cookies para anuncios personalizados, y puedes cambiar tu elección cuando quieras.</p>
+    <p>Más información en la <a href="https://policies.google.com/technologies/ads?hl=es" target="_blank" rel="noopener">página de Google sobre publicidad</a>.</p>
+  </section>
+
+  <section>
+    <h2><span>6</span>Otros servicios que usa el sitio</h2>
+    <ul>
+      <li><strong>Cloudflare</strong> aloja el sitio y lo protege de ataques. Procesa datos técnicos de cada visita, como tu IP y tu navegador, para entregarte las páginas. El sitio también le consulta el país de tu conexión para elegir el idioma automáticamente; ese dato no se guarda. <a href="https://www.cloudflare.com/es-es/privacypolicy/" target="_blank" rel="noopener">Política de Cloudflare</a>.</li>
+      <li><strong>Google Fonts</strong> entrega las tipografías del sitio. <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">Política de Google</a>.</li>
+      <li><strong>jsDelivr</strong> entrega los íconos de redes sociales y las banderas del ranking. <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">Política de jsDelivr</a>.</li>
+      <li><strong>LoL Esports (Riot Games)</strong> provee el calendario y los resultados de los partidos oficiales que se ven en el sitio. Tu navegador consulta directamente su servicio y carga desde ahí los escudos de los equipos. <a href="https://www.riotgames.com/es/privacy-notice" target="_blank" rel="noopener">Aviso de privacidad de Riot Games</a>.</li>
+    </ul>
+    <p>Estos servicios reciben tu dirección IP cuando tu navegador carga sus recursos y la tratan según sus propias políticas. Los botones para compartir (WhatsApp, X, Facebook, Reddit, Bluesky y Threads) son solo enlaces: no se carga nada de esas redes hasta que haces clic.</p>
+  </section>
+
+  <section>
+    <h2><span>7</span>Cookies y almacenamiento</h2>
+    <table class="table">
+      <thead><tr><th>Qué</th><th>De quién</th><th>Para qué</th></tr></thead>
+      <tbody>
+        <tr><td>Almacenamiento local del juego</td><td>Iron to Legend</td><td>Necesario: guarda tu progreso, preferencias e identificador del ranking.</td></tr>
+        <tr><td>Cookies de Google Analytics (como _ga)</td><td>Google</td><td>Estadísticas de visitas.</td></tr>
+        <tr><td>Cookies publicitarias</td><td>Google y sus socios</td><td>Mostrar y medir anuncios, y personalizarlos si lo permites.</td></tr>
+      </tbody>
+    </table>
+    <p>Puedes bloquear o borrar las cookies desde tu navegador. El juego sigue funcionando sin cookies de terceros.</p>
+  </section>
+
+  <section>
+    <h2><span>8</span>Para qué usamos los datos</h2>
+    <p>Usamos los datos para hacer funcionar el juego y guardar tu progreso, armar el ranking diario y evitar trampas, medir el uso del sitio para mejorarlo y mostrar anuncios. <strong>No vendemos tus datos personales.</strong></p>
+  </section>
+
+  <section>
+    <h2><span>9</span>Cuánto tiempo se guardan</h2>
+    <p>Los datos de tu dispositivo quedan ahí hasta que los borres. Los resultados del ranking se guardan mientras el ranking y su historial estén disponibles en el sitio, salvo que nos pidas eliminarlos. Google conserva sus datos según sus propias políticas.</p>
+  </section>
+
+  <section>
+    <h2><span>10</span>Tus derechos</h2>
+    <p>Puedes pedirnos acceder a los datos del ranking asociados a tu dispositivo, corregirlos o eliminarlos. Tu nombre del ranking lo puedes cambiar desde el propio juego. Para pedir una eliminación, escríbenos con tu nombre en el ranking y el día o los días en que jugaste.</p>
+    <p>Si vives en Argentina, tienes los derechos de la Ley 25.326 de Protección de Datos Personales. La Agencia de Acceso a la Información Pública, como órgano de control de esa ley, atiende las denuncias y los reclamos de quienes consideren afectados sus derechos. Si vives en la Unión Europea, el Reino Unido (RGPD) o Brasil (LGPD), tienes derechos similares, incluido el de reclamar ante tu autoridad de protección de datos.</p>
+  </section>
+
+  <section>
+    <h2><span>11</span>Menores de edad</h2>
+    <p>El sitio no está dirigido a menores de 13 años y no recopilamos a sabiendas datos personales de menores de esa edad. Si crees que un menor nos envió datos personales, escríbenos y los eliminaremos.</p>
+  </section>
+
+  <section>
+    <h2><span>12</span>Cambios en esta política</h2>
+    <p>Si cambiamos esta política, publicaremos la nueva versión en esta página con su fecha de actualización.</p>
+  </section>
+
+  <section id="es-contacto">
+    <h2><span>13</span>Contacto</h2>
+    <p>Para consultas sobre privacidad o para ejercer tus derechos, escríbenos por:</p>
+    <div class="contact">
+      <a href="https://discord.gg/JK8xXmqCr" target="_blank" rel="noopener">Discord</a>
+      <a href="https://x.com/irontolegendgam" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </section>
+</article>
+
+<!-- ===================== ENGLISH ===================== -->
+<article data-l="en" lang="en">
+  <p class="eyebrow">Iron to Legend</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: October 16, 2026</p>
+  <p class="lead">Iron to Legend (irontolegend.com) is a free, unofficial League of Legends fan game. This page explains what data is used when you play, why, who it is shared with and how you can control it. You don't need an account or an email address to play.</p>
+
+  <section>
+    <h2><span>1</span>Who is responsible</h2>
+    <p>Iron to Legend is an independent project run from Argentina. If you have any questions about this policy or your data, contact us through the channels in the <a href="#en-contact">Contact</a> section.</p>
+  </section>
+
+  <section>
+    <h2><span>2</span>Data stored on your device</h2>
+    <p>The game stores the following in your browser's local storage (localStorage), not on our servers:</p>
+    <ul>
+      <li>your current run, your stories and your records;</li>
+      <li>your daily challenge results;</li>
+      <li>your chosen language and whether sound is on;</li>
+      <li>a random device identifier, which contains no personal data and lets the ranking recognize your results;</li>
+      <li>the name you use in the ranking.</li>
+    </ul>
+    <p>You can delete all of this at any time from your browser settings (clear site data). Keep in mind that this also deletes your progress.</p>
+  </section>
+
+  <section>
+    <h2><span>3</span>Daily challenge ranking</h2>
+    <p>When you finish your first attempt of the day, the following is sent to our server (hosted on Cloudflare):</p>
+    <ul>
+      <li>your device's random identifier;</li>
+      <li>your ranking name: one generated automatically or one you choose;</li>
+      <li>the day, the game, your score and a summary of your result (title earned, peak rank, titles and Worlds).</li>
+    </ul>
+    <p>The server also records the approximate country of your connection, which Cloudflare derives from your IP address, and a code derived from your IP through a one-way function (hash), used to limit cheating and repeated submissions. <strong>We do not store your IP address.</strong></p>
+    <p>The public ranking shows your name, country, score and result. Don't use your real name or other personal information as your ranking name.</p>
+  </section>
+
+  <section>
+    <h2><span>4</span>Usage statistics</h2>
+    <p>We use Google Analytics, loaded through Google Tag Manager, to learn how many people visit the site, from which countries and which sections they use. Google Analytics uses cookies and receives technical data such as your IP address, device and browser type and the pages you visit. We only use this information in aggregate, to improve the site.</p>
+    <p>You can read <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from sites that use its services</a> and turn off Google Analytics with its <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">opt-out browser add-on</a>.</p>
+  </section>
+
+  <section>
+    <h2><span>5</span>Advertising (Google AdSense)</h2>
+    <p>We show Google AdSense ads to cover the site's costs.</p>
+    <div class="box">
+      <ul>
+        <li>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites.</li>
+        <li>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to this site and/or other sites on the Internet.</li>
+        <li>You can opt out of personalized advertising in <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google Ads Settings</a>. You can also opt out of other vendors' use of cookies for personalized advertising at <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a> or, in Europe, at <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener">youronlinechoices.eu</a>.</li>
+      </ul>
+    </div>
+    <p>If you opt out, you will still see ads, but they won't be based on your interests. If you visit from the European Economic Area, the United Kingdom or Switzerland, we ask for your consent before using cookies for personalized ads, and you can change your choice at any time.</p>
+    <p>Learn more on <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's advertising page</a>.</p>
+  </section>
+
+  <section>
+    <h2><span>6</span>Other services used by the site</h2>
+    <ul>
+      <li><strong>Cloudflare</strong> hosts the site and protects it from attacks. It processes technical data from each visit, such as your IP and browser, to deliver the pages. The site also asks it for your connection's country to pick the language automatically; that data is not stored. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's policy</a>.</li>
+      <li><strong>Google Fonts</strong> delivers the site's fonts. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's policy</a>.</li>
+      <li><strong>jsDelivr</strong> delivers the social media icons and the ranking flags. <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">jsDelivr's policy</a>.</li>
+      <li><strong>LoL Esports (Riot Games)</strong> provides the schedule and results of the official matches shown on the site. Your browser queries its service directly and loads the team logos from it. <a href="https://www.riotgames.com/en/privacy-notice" target="_blank" rel="noopener">Riot Games privacy notice</a>.</li>
+    </ul>
+    <p>These services receive your IP address when your browser loads their resources and handle it under their own policies. The share buttons (WhatsApp, X, Facebook, Reddit, Bluesky and Threads) are plain links: nothing from those networks loads until you click.</p>
+  </section>
+
+  <section>
+    <h2><span>7</span>Cookies and storage</h2>
+    <table class="table">
+      <thead><tr><th>What</th><th>From</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Game local storage</td><td>Iron to Legend</td><td>Necessary: stores your progress, preferences and ranking identifier.</td></tr>
+        <tr><td>Google Analytics cookies (such as _ga)</td><td>Google</td><td>Visit statistics.</td></tr>
+        <tr><td>Advertising cookies</td><td>Google and its partners</td><td>Serve and measure ads, and personalize them if you allow it.</td></tr>
+      </tbody>
+    </table>
+    <p>You can block or delete cookies in your browser. The game keeps working without third-party cookies.</p>
+  </section>
+
+  <section>
+    <h2><span>8</span>How we use data</h2>
+    <p>We use data to run the game and save your progress, build the daily ranking and prevent cheating, measure site usage to improve it, and show ads. <strong>We do not sell your personal data.</strong></p>
+  </section>
+
+  <section>
+    <h2><span>9</span>How long data is kept</h2>
+    <p>Data on your device stays there until you delete it. Ranking results are kept for as long as the ranking and its history are available on the site, unless you ask us to delete them. Google keeps its data under its own policies.</p>
+  </section>
+
+  <section>
+    <h2><span>10</span>Your rights</h2>
+    <p>You can ask us to access, correct or delete the ranking data linked to your device. You can change your ranking name in the game itself. To request deletion, contact us with your ranking name and the day or days you played.</p>
+    <p>If you live in Argentina, you have the rights granted by Personal Data Protection Law 25.326; the Agency for Access to Public Information, as the authority for that law, handles complaints from people who believe their rights have been affected. If you live in the European Union or the United Kingdom (GDPR) or in Brazil (LGPD), you have similar rights, including the right to complain to your data protection authority.</p>
+  </section>
+
+  <section>
+    <h2><span>11</span>Children</h2>
+    <p>The site is not directed at children under 13, and we do not knowingly collect personal data from children under that age. If you believe a child has sent us personal data, contact us and we will delete it.</p>
+  </section>
+
+  <section>
+    <h2><span>12</span>Changes to this policy</h2>
+    <p>If we change this policy, we will post the new version on this page with its update date.</p>
+  </section>
+
+  <section id="en-contact">
+    <h2><span>13</span>Contact</h2>
+    <p>For privacy questions or to exercise your rights, reach us on:</p>
+    <div class="contact">
+      <a href="https://discord.gg/JK8xXmqCr" target="_blank" rel="noopener">Discord</a>
+      <a href="https://x.com/irontolegendgam" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </section>
+</article>
+
+<!-- ===================== PORTUGUÊS ===================== -->
+<article data-l="pt" lang="pt-BR">
+  <p class="eyebrow">Iron to Legend</p>
+  <h1>Política de privacidade</h1>
+  <p class="updated">Última atualização: 16 de outubro de 2026</p>
+  <p class="lead">Iron to Legend (irontolegend.com) é um fan game gratuito e não oficial de League of Legends. Aqui explicamos quais dados são usados quando você joga, para quê, com quem são compartilhados e como você pode controlá-los. Para jogar, você não precisa criar uma conta nem informar seu e-mail.</p>
+
+  <section>
+    <h2><span>1</span>Quem é o responsável</h2>
+    <p>Iron to Legend é um projeto independente operado a partir da Argentina. Se tiver qualquer dúvida sobre esta política ou sobre seus dados, fale com a gente pelos canais da seção <a href="#pt-contato">Contato</a>.</p>
+  </section>
+
+  <section>
+    <h2><span>2</span>Dados salvos no seu dispositivo</h2>
+    <p>O jogo salva no armazenamento local do seu navegador (localStorage), e não nos nossos servidores:</p>
+    <ul>
+      <li>sua partida em andamento, suas histórias e seus recordes;</li>
+      <li>seus resultados do desafio diário;</li>
+      <li>o idioma escolhido e se o som está ativado;</li>
+      <li>um identificador aleatório do dispositivo, que não contém dados pessoais e serve para o ranking reconhecer seus resultados;</li>
+      <li>o nome que você usa no ranking.</li>
+    </ul>
+    <p>Você pode apagar tudo isso quando quiser nas configurações do navegador (limpar os dados do site). Lembre-se de que isso também apaga seu progresso.</p>
+  </section>
+
+  <section>
+    <h2><span>3</span>Ranking do desafio diário</h2>
+    <p>Quando você termina sua primeira tentativa do dia, é enviado ao nosso servidor (hospedado na Cloudflare):</p>
+    <ul>
+      <li>o identificador aleatório do seu dispositivo;</li>
+      <li>seu nome no ranking: um gerado automaticamente ou o que você escolher;</li>
+      <li>o dia, o jogo, sua pontuação e um resumo do resultado (título conquistado, elo máximo, títulos e Mundiais).</li>
+    </ul>
+    <p>Além disso, o servidor registra o país aproximado da sua conexão, que a Cloudflare deduz do seu endereço IP, e um código derivado do IP por meio de uma função irreversível (hash), usado para limitar trapaças e envios repetidos. <strong>Não armazenamos seu endereço IP.</strong></p>
+    <p>No ranking público aparecem seu nome, seu país, sua pontuação e seu resultado. Não use seu nome real nem outros dados pessoais como nome no ranking.</p>
+  </section>
+
+  <section>
+    <h2><span>4</span>Estatísticas de uso</h2>
+    <p>Usamos o Google Analytics, carregado pelo Google Tag Manager, para saber quantas pessoas visitam o site, de quais países e quais seções usam. O Google Analytics usa cookies e recebe dados técnicos como seu endereço IP, o tipo de dispositivo e de navegador e as páginas que você visita. Usamos essas informações apenas de forma agregada, para melhorar o site.</p>
+    <p>Você pode ler <a href="https://policies.google.com/technologies/partner-sites?hl=pt-BR" target="_blank" rel="noopener">como o Google usa as informações de sites que usam seus serviços</a> e desativar o Google Analytics com o <a href="https://tools.google.com/dlpage/gaoptout?hl=pt-BR" target="_blank" rel="noopener">complemento de desativação</a>.</p>
+  </section>
+
+  <section>
+    <h2><span>5</span>Publicidade (Google AdSense)</h2>
+    <p>Exibimos anúncios do Google AdSense para cobrir os custos do site.</p>
+    <div class="box">
+      <ul>
+        <li>Fornecedores terceiros, incluindo o Google, usam cookies para exibir anúncios com base nas suas visitas anteriores a este site e a outros sites.</li>
+        <li>Os cookies de publicidade permitem que o Google e seus parceiros exibam anúncios com base nas suas visitas a este site e/ou a outros sites na Internet.</li>
+        <li>Você pode desativar a publicidade personalizada nas <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Configurações de anúncios do Google</a>. Também pode desativar os cookies de outros fornecedores para publicidade personalizada em <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a> ou, na Europa, em <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener">youronlinechoices.eu</a>.</li>
+      </ul>
+    </div>
+    <p>Se você desativar a personalização, continuará vendo anúncios, mas eles não serão baseados nos seus interesses. Se você acessar o site a partir do Espaço Econômico Europeu, do Reino Unido ou da Suíça, pedimos seu consentimento antes de usar cookies para anúncios personalizados, e você pode mudar sua escolha quando quiser.</p>
+    <p>Saiba mais na <a href="https://policies.google.com/technologies/ads?hl=pt-BR" target="_blank" rel="noopener">página do Google sobre publicidade</a>.</p>
+  </section>
+
+  <section>
+    <h2><span>6</span>Outros serviços usados pelo site</h2>
+    <ul>
+      <li><strong>Cloudflare</strong> hospeda o site e o protege contra ataques. Processa dados técnicos de cada visita, como seu IP e seu navegador, para entregar as páginas. O site também consulta a Cloudflare sobre o país da sua conexão para escolher o idioma automaticamente; esse dado não é armazenado. <a href="https://www.cloudflare.com/pt-br/privacypolicy/" target="_blank" rel="noopener">Política da Cloudflare</a>.</li>
+      <li><strong>Google Fonts</strong> entrega as fontes do site. <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank" rel="noopener">Política do Google</a>.</li>
+      <li><strong>jsDelivr</strong> entrega os ícones das redes sociais e as bandeiras do ranking. <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">Política do jsDelivr</a>.</li>
+      <li><strong>LoL Esports (Riot Games)</strong> fornece o calendário e os resultados das partidas oficiais exibidas no site. Seu navegador consulta o serviço diretamente e carrega de lá os escudos dos times. <a href="https://www.riotgames.com/pt-br/privacy-notice" target="_blank" rel="noopener">Aviso de privacidade da Riot Games</a>.</li>
+    </ul>
+    <p>Esses serviços recebem seu endereço IP quando seu navegador carrega os recursos deles e o tratam conforme as próprias políticas. Os botões de compartilhar (WhatsApp, X, Facebook, Reddit, Bluesky e Threads) são apenas links: nada dessas redes é carregado até você clicar.</p>
+  </section>
+
+  <section>
+    <h2><span>7</span>Cookies e armazenamento</h2>
+    <table class="table">
+      <thead><tr><th>O quê</th><th>De quem</th><th>Para quê</th></tr></thead>
+      <tbody>
+        <tr><td>Armazenamento local do jogo</td><td>Iron to Legend</td><td>Necessário: guarda seu progresso, preferências e identificador do ranking.</td></tr>
+        <tr><td>Cookies do Google Analytics (como _ga)</td><td>Google</td><td>Estatísticas de visitas.</td></tr>
+        <tr><td>Cookies de publicidade</td><td>Google e seus parceiros</td><td>Exibir e medir anúncios, e personalizá-los se você permitir.</td></tr>
+      </tbody>
+    </table>
+    <p>Você pode bloquear ou apagar os cookies no seu navegador. O jogo continua funcionando sem cookies de terceiros.</p>
+  </section>
+
+  <section>
+    <h2><span>8</span>Para que usamos os dados</h2>
+    <p>Usamos os dados para fazer o jogo funcionar e salvar seu progresso, montar o ranking diário e evitar trapaças, medir o uso do site para melhorá-lo e exibir anúncios. <strong>Não vendemos seus dados pessoais.</strong></p>
+  </section>
+
+  <section>
+    <h2><span>9</span>Por quanto tempo guardamos os dados</h2>
+    <p>Os dados do seu dispositivo ficam lá até você apagá-los. Os resultados do ranking são guardados enquanto o ranking e seu histórico estiverem disponíveis no site, a menos que você peça a exclusão. O Google guarda seus dados conforme as próprias políticas.</p>
+  </section>
+
+  <section>
+    <h2><span>10</span>Seus direitos</h2>
+    <p>Você pode nos pedir acesso aos dados do ranking associados ao seu dispositivo, a correção ou a exclusão deles. Seu nome no ranking pode ser alterado no próprio jogo. Para pedir uma exclusão, fale com a gente informando seu nome no ranking e o dia ou os dias em que jogou.</p>
+    <p>Se você mora no Brasil, tem os direitos previstos na Lei Geral de Proteção de Dados (LGPD), incluindo o de apresentar reclamação à ANPD. Se mora na Argentina, tem os direitos da Lei 25.326, e a Agencia de Acceso a la Información Pública, como órgão de controle dessa lei, atende denúncias e reclamações. Se mora na União Europeia ou no Reino Unido (RGPD), tem direitos semelhantes, incluindo o de reclamar à sua autoridade de proteção de dados.</p>
+  </section>
+
+  <section>
+    <h2><span>11</span>Menores de idade</h2>
+    <p>O site não é direcionado a menores de 13 anos, e não coletamos intencionalmente dados pessoais de menores dessa idade. Se você acredita que um menor nos enviou dados pessoais, fale com a gente e nós os apagaremos.</p>
+  </section>
+
+  <section>
+    <h2><span>12</span>Mudanças nesta política</h2>
+    <p>Se mudarmos esta política, publicaremos a nova versão nesta página com a data de atualização.</p>
+  </section>
+
+  <section id="pt-contato">
+    <h2><span>13</span>Contato</h2>
+    <p>Para dúvidas sobre privacidade ou para exercer seus direitos, fale com a gente pelo:</p>
+    <div class="contact">
+      <a href="https://discord.gg/JK8xXmqCr" target="_blank" rel="noopener">Discord</a>
+      <a href="https://x.com/irontolegendgam" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </section>
+</article>
+
+</main>
+
+<footer class="wrap">
+  <a href="/" id="back-link">← Iron to Legend</a>
+</footer>
+
+<script>
+(function(){
+  var IDS = ['es', 'en', 'pt'];
+  var META = {
+    es: {title: 'Política de privacidad – Iron to Legend', html: 'es'},
+    en: {title: 'Privacy Policy – Iron to Legend', html: 'en'},
+    pt: {title: 'Política de privacidade – Iron to Legend', html: 'pt-BR'}
+  };
+  var KEY = 'grieta-sim.lang';
+  function pick(){
+    try{ var q = new URLSearchParams(location.search).get('lang'); if(IDS.indexOf(q) >= 0) return q; }catch(e){}
+    try{ var s = localStorage.getItem(KEY); if(IDS.indexOf(s) >= 0) return s; }catch(e){}
+    var n = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    n = n.toLowerCase();
+    return n.indexOf('es') === 0 ? 'es' : n.indexOf('pt') === 0 ? 'pt' : 'en';
+  }
+  function show(l){
+    document.querySelectorAll('article[data-l]').forEach(function(a){ a.hidden = a.getAttribute('data-l') !== l; });
+    document.querySelectorAll('.langs button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-lang') === l ? 'true' : 'false'); });
+    document.documentElement.lang = META[l].html;
+    document.title = META[l].title;
+    var home = location.protocol === 'file:' ? 'index.html' : '/';
+    document.getElementById('home-link').href = home;
+    document.getElementById('back-link').href = home;
+  }
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var l = b.getAttribute('data-lang');
+      show(l);
+      try{ var u = new URL(location.href); u.searchParams.set('lang', l); history.replaceState(null, '', u); }catch(e){}
+    });
+  });
+  show(pick());
+})();
+</script>
+</body>
+</html>
